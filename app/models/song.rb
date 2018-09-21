@@ -12,7 +12,7 @@ class Song < ActiveRecord::Base
   validates :release_year, numericality: {less_than_or_equal_to: DateTime.now.year}
   validates :release_year, presense: true,
     unless: Proc.new { |a| a.released == "false" }
-end
+
 end
 
 #
