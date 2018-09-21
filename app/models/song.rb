@@ -10,7 +10,7 @@ class Song < ActiveRecord::Base
   validates :title, presence: true, uniqueness: {scope: [:artist_name, :release_year]}
   validates :artist_name, presence: true
   validates :release_year, numericality: {less_than_or_equal_to: DateTime.now.year}
-  validates :release_year, presense: true,
+  validates :release_year, presence: true,
     unless: Proc.new { |a| a.released == "false" }
 
 end
