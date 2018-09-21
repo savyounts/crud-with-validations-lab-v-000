@@ -13,7 +13,7 @@ class Song < ActiveRecord::Base
   def unique_song?
     song = Song.find_by(title: title)
     if song.artist_name != artist_name && song.release_year != release_year
-      true
+      
     end
   end
 
