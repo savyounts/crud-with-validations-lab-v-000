@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
   end
 
   def not_unique_song?
-    song = Song.find_by(title: title, release_year: release_year, artist_name: artist_name)
+    Song.find_by(title: title, release_year: release_year, artist_name: artist_name)
   end
 end
 
