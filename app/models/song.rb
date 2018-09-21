@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  validates :title, presence: true, uniqueness: true, unless: :unique_song?
+  validates :title, presence: true, uniqueness: true
   validates :released, inclusion: {in: %w(True False)}
   validates :release_year, presence: true,  if :release_year_true?
   validates :artist_name, presence: true
@@ -9,8 +9,5 @@ class Song < ActiveRecord::Base
     released == True
   end
 
-  def unique_song?
-    song = Song.find_by(title: title)
-    song.artist_name != artist_name && song.release_year != release_year
-  end
+
 end
