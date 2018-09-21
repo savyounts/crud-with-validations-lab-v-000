@@ -6,14 +6,6 @@ class Song < ActiveRecord::Base
   validates :artist_name, presence: true
 
 
-
-Cannot be repeated by the same artist in the same year
-
-Must be less than or equal to the current year
-artist_name, a string
-Must not be blank
-
-
   def release_year_true
     released == True
   end
