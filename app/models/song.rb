@@ -14,6 +14,4 @@ class Song < ActiveRecord::Base
     song = Song.find_by(title: title)
     song.artist_name != artist_name && song.release_year != release_year
   end
-
-
 end
