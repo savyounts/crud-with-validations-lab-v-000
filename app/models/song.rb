@@ -11,9 +11,9 @@ class Song < ActiveRecord::Base
   validates_with ReleaseYearValidator
   validates :artist_name, presence: true
 
-  def release_year_false?
-    released == "false"
-  end
+  # def release_year_false?
+  #   released == "false"
+  # end
 
   def not_unique_song?
     Song.find_by(title: title, release_year: release_year, artist_name: artist_name)
