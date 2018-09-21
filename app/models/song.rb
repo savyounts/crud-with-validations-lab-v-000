@@ -16,6 +16,3 @@ class Song < ActiveRecord::Base
       true
     end
   end
-
-
-
