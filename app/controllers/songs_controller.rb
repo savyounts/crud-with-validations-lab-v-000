@@ -1,6 +1,8 @@
 class SongsController < ApplicationController
-
+  before_action :set_song, [:edit, :update, :show, :destroy]
+  
   def index
+    @
   end
 
   def new
@@ -23,8 +25,10 @@ class SongsController < ApplicationController
 
   private
 
-    def song_params 
+    def song_params
       params.require(:song).permit(:title, :released, :release_year, :artist_name, :genre)
+    end 
+
     def set_song
       @song = Song.find(params[:id])
     end
