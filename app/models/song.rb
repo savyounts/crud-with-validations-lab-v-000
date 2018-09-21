@@ -15,7 +15,6 @@ Must not be blank
 
   def release_year_true
     released == True
-
   end
 
   def unique_song?
