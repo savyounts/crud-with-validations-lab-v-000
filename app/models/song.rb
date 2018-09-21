@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
   validates :artist_name, presence: true
 
   def release_year_true?
-    released == True
+    released == "True"
   end
 
 end
