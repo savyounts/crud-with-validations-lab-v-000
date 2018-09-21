@@ -14,7 +14,7 @@ class Song < ActiveRecord::Base
 
 
   def release_true?
-    released == true
+    released
   end
 
 
