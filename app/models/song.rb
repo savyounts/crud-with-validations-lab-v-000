@@ -6,7 +6,6 @@ class Song < ActiveRecord::Base
 
 
   def release_true?
-    binding.pry
     released
   end
 
