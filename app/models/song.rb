@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
   validates :artist_name, presence: true
 
   def release_year_true?
-    released == "true"
+    released == "false"
   end
 
   def not_unique_song?
