@@ -14,14 +14,14 @@ class Song < ActiveRecord::Base
 
 
   def release_true?
-    released == "true"
+    released == true
   end
-    
+
 
 end
 
-validates :release_year, presence: true,
-  unless: Proc.new { |a| a.released == "false" }
+# validates :release_year, presence: true,
+#   unless: Proc.new { |a| a.released == "false" }
 
 #
 #
