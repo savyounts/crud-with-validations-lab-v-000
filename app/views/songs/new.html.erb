@@ -4,8 +4,8 @@
   <h2> Update @song.name </h2>
 <% end %>
 
-<% if @song.errors.any? %> 
-  <div>  
+<% if @song.errors.any? %>
+  <div>
     <ul>
       <% @song.errors.full_message.each do |error| %>
         <li><%= error %></li>
@@ -22,4 +22,3 @@
   <%= f.text_field :genre @song.genre %>
   <%= f.submit %>
 <% end %>
-  
