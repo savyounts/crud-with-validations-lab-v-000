@@ -1,6 +1,6 @@
 class ReleaseYearValidator < ActiveModel::Validator
   def validate(record)
-    if record.released == "true" && record.release_year.blank?
+    if record.released == "true" && record.release_year.nil?
       record.errors[:base] << "Must fill in release year"
     end
   end
